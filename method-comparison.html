@@ -116,16 +116,24 @@ This page uses a number of different methods to embed icons within the page. If 
 <h2>Font Icons:</h2>
 <table>
     <tr>
-        <td>
+        <th>
             <h3>Font ASCII</h3>
+        </th>
+        <th>
+            <h3>Font PUA</h3>
+        </th>
+        <th>
+            <h3>Font Ligatures</h3>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <div class='font'>P R</div>
         </td>
         <td>
-            <h3>Font PUA</h3>
             <div class='font'>&#xe401; &#xe402;</div>
         </td>
         <td>
-            <h3>Font Ligatures</h3>
             <div class='font'>pig rabbit</div>
         </td>
     </tr>
@@ -135,28 +143,40 @@ This page uses a number of different methods to embed icons within the page. If 
 <p>These implementations can not be altered via JS or CSS since the svg dom is not available in the document dom. All use the &lt;img/&gt; tag.</p>
 <table>
     <tr>
-        <td>
+        <th>
             <h3>SVG as Image</h3>
+        </th>
+        <th>
+            <h3>SVG Image Spritesheet</h3>
+            <h4>Referenced by viewBox</h4>
+        </th>
+        <th>
+            <h3>SVG Image Spritesheet</h3>
+            <h4>Referenced by name</h4>
+        </th>
+        <th>
+            <h3>SVG Image Stack</h3>
+            <h4>Stack based on groups</h4>
+        </th>
+        <th>
+            <h3>SVG Image Symbol Stack</h3>
+            <h4>Stack based on symbols</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <img src='farm-animals-rabbit.svg'/>
         </td>
         <td>
-            <h3>SVG Image Spritesheet</h3>
-            <h4>Referenced by viewBox</h4>
             <img src='farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))'/>
         </td>
         <td>
-            <h3>SVG Image Spritesheet</h3>
-            <h4>Referenced by name</h4>
             <img src='farm-animals-sprite.svg#rabbit-view'/>
         </td>
         <td>
-            <h3>SVG Image Stack</h3>
-            <h4>Stack based on groups</h4>
             <img src='farm-animals-stack.svg#rabbit'/>
         </td>
         <td>
-            <h3>SVG Image Symbol Stack</h3>
-            <h4>Stack based on symbols</h4>
             <img src='farm-animals-symbols.svg#rabbit-symbol'/>
         </td>
     </tr>
@@ -164,32 +184,46 @@ This page uses a number of different methods to embed icons within the page. If 
 <h2>CSS Background SVG Icons:</h2>
 <table>
     <tr>
-        <td>
+        <th>
             <h3>CSS as File Url</h3>
+        </th>
+        <th>
+            <h3>CSS as Data URI</h3>
+        </th>
+        <th>
+            <h3>CSS as File Url</h3>
+            <h4>Spritesheet referenced by viewBox</h4>
+        </th>
+        <th>
+            <h3>CSS as File Url</h3>
+            <h4>Spritesheet referenced by name</h4>
+        </th>
+        <th>
+            <h3>CSS as File Url</h3>
+            <h4>Stack based on groups</h4>
+        </th>
+        <th>
+            <h3>CSS as File Url</h3>
+            <h4>Stack based on symbols</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <div class="background-icon"></div>
         </td>
         <td>
-            <h3>CSS as Data URI</h3>
             <div class="background-icon inline"></div>
         </td>
         <td>
-            <h3>CSS Spritesheet</h3>
-            <h4>Referenced by viewBox</h4>
             <div class="background-icon sprite-viewbox"></div>
         </td>
         <td>
-            <h3>CSS Spritesheet</h3>
-            <h4>Referenced by name</h4>
             <div class="background-icon sprite-views"></div>
         </td>
         <td>
-            <h3>CSS Stack</h3>
-            <h4>Stack based on groups</h4>
             <div class="background-icon stack"></div>
         </td>
         <td>
-            <h3>CSS Symbol Stack</h3>
-            <h4>Stack based on symbols</h4>
             <div class="background-icon symbol"></div>
         </td>
     </tr>
@@ -198,40 +232,54 @@ This page uses a number of different methods to embed icons within the page. If 
 <p>These implementations can be altered via JS or CSS. Except the inline version, all versions use the shadow dom, which has limited modification possibilities</p>
 <table>
     <tr>
-        <td>
+        <th>
             <h3>SVG Inline</h3>
+        </th>
+        <th>
+            <h3>SVG Internal Xlink</h3>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Spritesheet referenced by viewBox</h4>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Spritesheet referenced by name</h4>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on groups</h4>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on symbols</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
         </td>
         <td>
-            <h3>SVG Internal Xlink</h3>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                 <use xlink:href="#rabbit" />
             </svg>
         </td>
         <td>
-            <h3>SVG External Xlink (Sprite)</h3>
-            <h4>Referenced by viewBox</h4>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                 <use xlink:href="farm-animals-sprite.svg#rabbit-view" />
             </svg>
         </td>
         <td>
-            <h3>SVG External Xlink (Sprite)</h3>
-            <h4>Referenced by name</h4>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                 <use xlink:href="farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))" />
             </svg>
         </td>
         <td>
-            <h3>SVG External Xlink (Stack)</h3>
-            <h4>Stack based on groups</h4>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                 <use xlink:href="farm-animals-stack.svg#rabbit" />
             </svg>
         </td>
         <td>
-            <h3>SVG External Xlink (Symbol Stack)</h3>
-            <h4>Stack based on symbols</h4>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                 <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
             </svg>
@@ -244,14 +292,28 @@ This page uses a number of different methods to embed icons within the page. If 
 <p>These icons are made responsive simply by using <code>width: 100%; height: auto;</code>. This might fail in several browsers.</p>
 <table class="responsive">
     <tr>
-        <td>
+        <th>
             <h3>SVG Inline</h3>
+        </th>
+        <th>
+            <h3>SVG Internal Xlink</h3>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on groups</h4>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on symbols</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <div class="responsive-svg">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
             </div>
         </td>
         <td>
-            <h3>SVG Internal Xlink</h3>
             <div class="responsive-svg">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="#rabbit" />
@@ -259,8 +321,6 @@ This page uses a number of different methods to embed icons within the page. If 
             </div>
         </td>
         <td>
-            <h3>SVG External Xlink (Stack)</h3>
-            <h4>Stack based on groups</h4>
             <div class="responsive-svg">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="farm-animals-stack.svg#rabbit" />
@@ -268,8 +328,6 @@ This page uses a number of different methods to embed icons within the page. If 
             </div>
         </td>
         <td>
-            <h3>SVG External Xlink (Symbol Stack)</h3>
-            <h4>Stack based on symbols</h4>
             <div class="responsive-svg">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
@@ -283,14 +341,28 @@ This page uses a number of different methods to embed icons within the page. If 
 <p>Since some browsers display svg's always with 150px height, we may use the <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video/">padding hack</a> to fix this.</p>
 <table class="responsive">
     <tr>
-        <td>
+        <th>
             <h3>SVG Inline</h3>
+        </th>
+        <th>
+            <h3>SVG Internal Xlink</h3>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on groups</h4>
+        </th>
+        <th>
+            <h3>SVG External Xlink</h3>
+            <h4>Stack based on symbols</h4>
+        </th>
+    </tr>
+    <tr>
+        <td>
             <div class="responsive-svg hacked">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
             </div>
         </td>
         <td>
-            <h3>SVG Internal Xlink</h3>
             <div class="responsive-svg hacked">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="#rabbit" />
@@ -298,8 +370,6 @@ This page uses a number of different methods to embed icons within the page. If 
             </div>
         </td>
         <td>
-            <h3>SVG External Xlink (Stack)</h3>
-            <h4>Stack based on groups</h4>
             <div class="responsive-svg hacked">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="farm-animals-stack.svg#rabbit" />
@@ -307,8 +377,6 @@ This page uses a number of different methods to embed icons within the page. If 
             </div>
         </td>
         <td>
-            <h3>SVG External Xlink (Symbol Stack)</h3>
-            <h4>Stack based on symbols</h4>
             <div class="responsive-svg hacked">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
                     <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />

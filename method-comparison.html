@@ -14,8 +14,31 @@
     font-style: normal;
 
 }
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    line-height: 1.4;
+}
+h3 {
+    margin-bottom: 0;
+}
+h3 + *:not(h4) {
+    margin-top: 1rem;
+}
+h4 {
+    margin-top: 0;
+    color: darkgrey;
+    font-size: 1em;
+}
+table {
+    margin-top: 3em;
+    width: 100%;
+}
+td {
+    text-align: center;
+}
 .font {
-    font-size: 3em;
+    font-size: 5em;
     font-family: 'farm-animals-regular';
     text-rendering: optimizeLegibility;
     -webkit-font-feature-settings: 'dlig', 'liga';
@@ -24,67 +47,275 @@
     -o-font-feature-settings: 'dlig', 'liga';
     font-feature-settings: 'dlig', 'liga';
 }
-svg, img { width: 3em; height: 3em; display: block; }
-body {
-    font-family: 'Open Sans';
-    font-size: 120%;
-    line-height: 1.4;
+svg, img, .background-icon{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    outline: 1px dashed red;
+}
+.background-icon {
+    background-image: url(farm-animals-rabbit.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.background-icon.sprite-viewbox {
+    background-image: url(farm-animals-sprite.svg#svgView(viewBox(135,0,45,55)));
+}
+.background-icon.sprite-views   {
+    background-image: url(farm-animals-sprite.svg#rabbit-view);
+}
+.background-icon.stack   {
+    background-image: url(farm-animals-stack.svg#rabbit);
+}
+.background-icon.symbol   {
+    background-image: url(farm-animals-symbols.svg#rabbit-symbol);
+}
+.background-icon.inline   {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><path fill="%23F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="%23F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="%23F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="%23F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="%23D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="%23F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="%23D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="%23D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="%23F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="%23F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="%23D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="%23B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="%23B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="%23FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="%23FFF" cx="29.55" cy="35.42" r=".5"/><path fill="%23F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></svg>');
+}
+/* Responsive svg */
+.responsive-svg svg{
+    width: 100%;
+    height: auto;
+}
+/* Responsive svg with responsive hack*/
+.responsive-svg.hacked {
+    position: relative;
+}
+.responsive-svg.hacked:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 122.333%; /* This reflects the svg viewbox aspect ratio */
+}
+.responsive-svg.hacked svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* We need to reset the fixed width and height */
+    width: 100%;
+    height: auto;
+}
+/* This part is onyl for demonstration purposes and not part of the responsive hack*/
+table.responsive .responsive-svg {
+    display: inline-block;
+    width: 300px;
+    outline: 1px dashed green;
 }
 </style>
 </head>
 <body>
 <h1>Icon Test Suite</h1>
-This page uses a number of different methods to embed icons within the page. If you see an icon (or two) below each page, success! View source to see what each method is actually doing. Images are courtesy of Freepik.
+This page uses a number of different methods to embed icons within the page. If you see an icon (or two) below each page, success! View source to see what each method is actually doing. Images are courtesy of <a href="http://www.freepik.com/free-vector/animals-flat-vector-set_715458.htm">Freepik</a>.
 
-<h2>Font ASCII</h2>
-<div class='font'>P R</div>
+<h2>Font Icons:</h2>
+<table>
+    <tr>
+        <td>
+            <h3>Font ASCII</h3>
+            <div class='font'>P R</div>
+        </td>
+        <td>
+            <h3>Font PUA</h3>
+            <div class='font'>&#xe401; &#xe402;</div>
+        </td>
+        <td>
+            <h3>Font Ligatures</h3>
+            <div class='font'>pig rabbit</div>
+        </td>
+    </tr>
+</table>
 
-<h2>Font PUA</h2>
-<div class='font'>&#xe401; &#xe402;</div>
+<h2>Distinct SVG Icons:</h2>
+<p>These implementations can not be altered via JS or CSS since the svg dom is not available in the document dom. All use the &lt;img/&gt; tag.</p>
+<table>
+    <tr>
+        <td>
+            <h3>SVG as Image</h3>
+            <img src='farm-animals-rabbit.svg'/>
+        </td>
+        <td>
+            <h3>SVG Image Spritesheet</h3>
+            <h4>Referenced by viewBox</h4>
+            <img src='farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))'/>
+        </td>
+        <td>
+            <h3>SVG Image Spritesheet</h3>
+            <h4>Referenced by name</h4>
+            <img src='farm-animals-sprite.svg#rabbit-view'/>
+        </td>
+        <td>
+            <h3>SVG Image Stack</h3>
+            <h4>Stack based on groups</h4>
+            <img src='farm-animals-stack.svg#rabbit'/>
+        </td>
+        <td>
+            <h3>SVG Image Symbol Stack</h3>
+            <h4>Stack based on symbols</h4>
+            <img src='farm-animals-symbols.svg#rabbit-symbol'/>
+        </td>
+    </tr>
+</table>
+<h2>CSS Background SVG Icons:</h2>
+<table>
+    <tr>
+        <td>
+            <h3>CSS as File Url</h3>
+            <div class="background-icon"></div>
+        </td>
+        <td>
+            <h3>CSS as Data URI</h3>
+            <div class="background-icon inline"></div>
+        </td>
+        <td>
+            <h3>CSS Spritesheet</h3>
+            <h4>Referenced by viewBox</h4>
+            <div class="background-icon sprite-viewbox"></div>
+        </td>
+        <td>
+            <h3>CSS Spritesheet</h3>
+            <h4>Referenced by name</h4>
+            <div class="background-icon sprite-views"></div>
+        </td>
+        <td>
+            <h3>CSS Stack</h3>
+            <h4>Stack based on groups</h4>
+            <div class="background-icon stack"></div>
+        </td>
+        <td>
+            <h3>CSS Symbol Stack</h3>
+            <h4>Stack based on symbols</h4>
+            <div class="background-icon symbol"></div>
+        </td>
+    </tr>
+</table>
+<h2>Interactive SVG Icons:</h2>
+<p>These implementations can be altered via JS or CSS. Except the inline version, all versions use the shadow dom, which has limited modification possibilities</p>
+<table>
+    <tr>
+        <td>
+            <h3>SVG Inline</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
+        </td>
+        <td>
+            <h3>SVG Internal Xlink</h3>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                <use xlink:href="#rabbit" />
+            </svg>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Sprite)</h3>
+            <h4>Referenced by viewBox</h4>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                <use xlink:href="farm-animals-sprite.svg#rabbit-view" />
+            </svg>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Sprite)</h3>
+            <h4>Referenced by name</h4>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                <use xlink:href="farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))" />
+            </svg>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Stack)</h3>
+            <h4>Stack based on groups</h4>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                <use xlink:href="farm-animals-stack.svg#rabbit" />
+            </svg>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Symbol Stack)</h3>
+            <h4>Stack based on symbols</h4>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
+            </svg>
+        </td>
+    </tr>
+</table>
 
-<h2>Font Ligatures</h2>
-<div class='font'>pig rabbit</div>
 
-<h2>SVG Inline</h2>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
-    <g id='rabbit'>
-        <path fill="#F6E9E5" d="M28.98,32.54c1.51-1.99,7.93-6.54,5.91-15c-2.02-8.47-5.68-12.47-8.2-3.76c-2.51,8.71,0.57,17.21,0.57,17.21L28.98,32.54z"/>
-        <path fill="#F29E9F" d="M30.49,12.25c0,0,0,1.76-0.47,3.98c-0.47,2.22,1.8,7.42-0.48,12.96C29.55,29.19,38.04,23.09,30.49,12.25z"/>
-        <path fill="#F6E9E5" d="M16.73,32.54c-1.51-1.99-7.93-6.54-5.91-15c2.02-8.47,5.68-12.47,8.2-3.76c2.51,8.71-0.57,17.21-0.57,17.21L16.73,32.54z"/>
-        <path fill="#F29E9F" d="M15.22,12.25c0,0,0,1.76,0.47,3.98c0.47,2.22-1.8,7.42,0.48,12.96C16.16,29.19,7.68,23.09,15.22,12.25z"/>
-        <path fill="#D3C5C1" d="M14.02,44.66c0,4.2,3.78,7.6,8.45,7.6V37.05C17.8,37.05,14.02,40.46,14.02,44.66z"/>
-        <path fill="#F6E9E5" d="M30.91,44.66c0-4.2-3.78-7.6-8.45-7.6v15.21C27.13,52.26,30.91,48.86,30.91,44.66z"/>
-        <path fill="#D3C5C1" d="M22.43,33.41c-5.4,0-9.78,3.4-9.78,7.6c0,4.2,4.38,8.39,9.78,8.39c5.4,0,9.79-4.19,9.79-8.39C32.22,36.81,27.83,33.41,22.43,33.41z"/>
-        <rect x="17.25" y="50.4" fill="#D3C5C1" width="3.82" height="3.33"/>
-        <path fill="#D3C5C1" d="M22.15,55c0-1.65-1.34-2.98-2.98-2.98c-1.65,0-2.98,1.34-2.98,2.98H22.15z"/>
-        <rect x="23.86" y="50.4" fill="#F6E9E5" width="3.82" height="3.33"/>
-        <path fill="#F6E9E5" d="M28.75,55c0-1.65-1.34-2.98-2.98-2.98c-1.65,0-2.99,1.34-2.99,2.98H28.75z"/>
-        <path fill="#F6E9E5" d="M35.67,42.43c-1.37-0.69-2.15-5.77-2.15-5.77c-0.78-5.28-3.23-8.51-6.16-9.59c-0.14-0.05-0.27-0.1-0.4-0.16c-0.03-0.01-0.06-0.02-0.09-0.03c-1.26-0.48-2.78-0.76-4.41-0.76s-3.15,0.28-4.41,0.76c-0.03,0.01-0.06,0.02-0.09,0.04c-0.13,0.05-0.26,0.11-0.39,0.16c-2.93,1.08-5.38,4.31-6.16,9.59c0,0-0.78,5.09-2.15,5.77c0,0,2.42,0.73,4.76,2.23c0,0,1.26,0.92,1.87,1.39c1.35,1.03,3.6,1.66,6.57,1.66c0.01,0,0.02,0,0.03,0c3.24,0,5.25-0.63,6.6-1.66c0.62-0.47,1.21-0.98,1.84-1.39c0-0.01,0-0.01,0-0.02C33.27,43.15,35.67,42.43,35.67,42.43z M22.46,39.1c-0.01,0-0.01,0-0.02,0C22.45,39.1,22.46,39.1,22.46,39.1C22.47,39.1,22.47,39.1,22.46,39.1C22.47,39.1,22.47,39.1,22.46,39.1z"/>
-        <path fill="#D3C5C1" d="M18.05,26.87c-0.03,0.01-0.06,0.02-0.09,0.04c-0.13,0.05-0.26,0.11-0.39,0.16c-2.93,1.08-5.38,4.31-6.16,9.59c0,0-0.78,5.09-2.15,5.77c0,0,2.42,0.73,4.76,2.23c0,0,1.26,0.92,1.87,1.39c1.35,1.03,3.6,1.66,6.57,1.66V39.1c-0.01,0-0.01,0-0.02,0c0.01,0,0.01,0,0.02,0v-4.03v-8.96C20.83,26.11,19.32,26.39,18.05,26.87z"/>
-        <circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/>
-        <circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/>
-        <circle fill="#FFFFFF" cx="16.83" cy="35.42" r="0.5"/>
-        <circle fill="#FFFFFF" cx="29.55" cy="35.42" r="0.5"/>
-        <path fill="#F29E9F" d="M24.7,39.8l-2.27,0.26l-2.27-0.26c-0.21-0.03-0.41,0.13-0.43,0.34c-0.02,0.21,0.13,0.41,0.34,0.43l1.94,0.22v2.85c-0.13,0.15-0.43,0.44-0.73,0.28c-0.19-0.1-0.43-0.03-0.53,0.16c-0.1,0.19-0.03,0.43,0.16,0.53c0.19,0.1,0.38,0.15,0.56,0.15c0.38,0,0.71-0.2,0.96-0.42c0.24,0.22,0.57,0.42,0.95,0.42c0.18,0,0.37-0.04,0.56-0.14c0.19-0.1,0.27-0.34,0.17-0.53c-0.1-0.19-0.34-0.27-0.53-0.17c-0.32,0.17-0.61-0.12-0.73-0.27V40.8l1.94-0.22c0.21-0.02,0.37-0.22,0.34-0.43C25.11,39.93,24.92,39.77,24.7,39.8z"/>
-    </g>
-</svg>
+<h2>SVG Icons responsive</h2>
+<p>These icons are made responsive simply by using <code>width: 100%; height: auto;</code>. This might fail in several browsers.</p>
+<table class="responsive">
+    <tr>
+        <td>
+            <h3>SVG Inline</h3>
+            <div class="responsive-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG Internal Xlink</h3>
+            <div class="responsive-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="#rabbit" />
+                </svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Stack)</h3>
+            <h4>Stack based on groups</h4>
+            <div class="responsive-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="farm-animals-stack.svg#rabbit" />
+                </svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Symbol Stack)</h3>
+            <h4>Stack based on symbols</h4>
+            <div class="responsive-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
+                </svg>
+            </div>
+        </td>
+    </tr>
+</table>
 
-<h2>SVG as Image</h2>
-<img src='farm-animals-rabbit.svg'>
-
-<h2>SVG Spritesheet (viewbox)</h2>
-<img src='farm-animals-sprite.svg#svgView(viewBox(135,0,45,55))'>
-
-<h2>SVG Spritesheet (predefined views)</h2>
-<img src='farm-animals-sprite.svg#rabbit-view'>
-
-<h2>SVG Stack</h2>
-<img src='farm-animals-stack.svg#rabbit'>
-
-<h2>SVG Symbol</h2>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
-<use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
-</svg>
-
+<h2>SVG Icons with responsive fix:</h2>
+<p>Since some browsers display svg's always with 150px height, we may use the <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video/">padding hack</a> to fix this.</p>
+<table class="responsive">
+    <tr>
+        <td>
+            <h3>SVG Inline</h3>
+            <div class="responsive-svg hacked">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 55"><g id="rabbit"><path fill="#F6E9E5" d="M28.98 32.54c1.51-1.99 7.93-6.54 5.91-15-2.02-8.47-5.68-12.47-8.2-3.76-2.51 8.71.57 17.21.57 17.21l1.72 1.55z"/><path fill="#F29E9F" d="M30.49 12.25s0 1.76-.47 3.98c-.47 2.22 1.8 7.42-.48 12.96.01 0 8.5-6.1.95-16.94z"/><path fill="#F6E9E5" d="M16.73 32.54c-1.51-1.99-7.93-6.54-5.91-15 2.02-8.47 5.68-12.47 8.2-3.76 2.51 8.71-.57 17.21-.57 17.21l-1.72 1.55z"/><path fill="#F29E9F" d="M15.22 12.25s0 1.76.47 3.98c.47 2.22-1.8 7.42.48 12.96-.01 0-8.49-6.1-.95-16.94z"/><path fill="#D3C5C1" d="M14.02 44.66c0 4.2 3.78 7.6 8.45 7.6V37.05c-4.67 0-8.45 3.41-8.45 7.61z"/><path fill="#F6E9E5" d="M30.91 44.66c0-4.2-3.78-7.6-8.45-7.6v15.21c4.67-.01 8.45-3.41 8.45-7.61z"/><path fill="#D3C5C1" d="M22.43 33.41c-5.4 0-9.78 3.4-9.78 7.6 0 4.2 4.38 8.39 9.78 8.39 5.4 0 9.79-4.19 9.79-8.39s-4.39-7.6-9.79-7.6zM17.25 50.4h3.82v3.33h-3.82z"/><path fill="#D3C5C1" d="M22.15 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.98 1.34-2.98 2.98h32.15z"/><path fill="#F6E9E5" d="M23.86 50.4h3.82v3.33h-3.82z"/><path fill="#F6E9E5" d="M28.75 55c0-1.65-1.34-2.98-2.98-2.98-1.65 0-2.99 1.34-2.99 2.98h38.75zM35.67 42.43c-1.37-.69-2.15-5.77-2.15-5.77-.78-5.28-3.23-8.51-6.16-9.59-.14-.05-.27-.1-.4-.16l-.09-.03c-1.26-.48-2.78-.76-4.41-.76s-3.15.28-4.41.76c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66h.03c3.24 0 5.25-.63 6.6-1.66.62-.47 1.21-.98 1.84-1.39v-.02c2.34-1.5 4.74-2.22 4.74-2.22zM22.46 39.1h-.02.02c.01 0 .01 0 0 0 .01 0 .01 0 0 0z"/><path fill="#D3C5C1" d="M18.05 26.87c-.03.01-.06.02-.09.04-.13.05-.26.11-.39.16-2.93 1.08-5.38 4.31-6.16 9.59 0 0-.78 5.09-2.15 5.77 0 0 2.42.73 4.76 2.23 0 0 1.26.92 1.87 1.39 1.35 1.03 3.6 1.66 6.57 1.66V39.1h-.02.02V26.11c-1.63 0-3.14.28-4.41.76z"/><circle fill="#B6382F" cx="16.15" cy="35.92" r="1.61"/><circle fill="#B6382F" cx="28.77" cy="35.92" r="1.61"/><circle fill="#FFF" cx="16.83" cy="35.42" r=".5"/><circle fill="#FFF" cx="29.55" cy="35.42" r=".5"/><path fill="#F29E9F" d="M24.7 39.8l-2.27.26-2.27-.26c-.21-.03-.41.13-.43.34-.02.21.13.41.34.43l1.94.22v2.85c-.13.15-.43.44-.73.28-.19-.1-.43-.03-.53.16-.1.19-.03.43.16.53.19.1.38.15.56.15.38 0 .71-.2.96-.42.24.22.57.42.95.42.18 0 .37-.04.56-.14.19-.1.27-.34.17-.53s-.34-.27-.53-.17c-.32.17-.61-.12-.73-.27V40.8l1.94-.22c.21-.02.37-.22.34-.43-.02-.22-.21-.38-.43-.35z"/></g></svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG Internal Xlink</h3>
+            <div class="responsive-svg hacked">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="#rabbit" />
+                </svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Stack)</h3>
+            <h4>Stack based on groups</h4>
+            <div class="responsive-svg hacked">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="farm-animals-stack.svg#rabbit" />
+                </svg>
+            </div>
+        </td>
+        <td>
+            <h3>SVG External Xlink (Symbol Stack)</h3>
+            <h4>Stack based on symbols</h4>
+            <div class="responsive-svg hacked">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 55" enable-background="new 0 0 45 55" xml:space="preserve">
+                    <use xlink:href="farm-animals-symbols.svg#rabbit-symbol" />
+                </svg>
+            </div>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
